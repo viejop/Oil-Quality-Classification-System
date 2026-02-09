@@ -1,10 +1,10 @@
 # Oil-Quality-Classification-System
 
-Overview:
-This project is an AI powered oil quality detection system that classifies oil as either clean or dirty using a trained learning model and displays the result on an Arduino controlled LCD. A camera captures images of oil samples, a MobileNetV2 model performs classification, and the prediction is sent via serial communication to an Arduino Uno, which updates the LCD display.
+
+This project is an AI powered oil quality detection system that can classify oil as either clean or dirty using a trained learning model, and also displays the result on an LCD that's controlled with an Arduino. A camera captures images of oil samples, a MobileNetV2 model then does the classification, and the prediction is sent using serial communication to an Arduino Uno, which then updates on the LCD display.
 
 
-Hardware Used:
+Materials used - 
 
 - Arduino Uno
 - 16x2 LCD (HD44780 compatible)
@@ -13,7 +13,7 @@ Hardware Used:
 - 10kΩ potentiometer or resistor for LCD contrast
 
 
-Software and Libraries:
+Software/libraries I used -
 - Python 3
 - PyTorch
 - Torchvision
@@ -23,26 +23,25 @@ Software and Libraries:
 - LiquidCrystal library
 
 
-How It Works:
+Summary:
 
-A MobileNetV2 model was trained on labeled images of clean and dirty oil.
+A MobileNetV2 model was trained on labeled images of clean and dirty oil using a Jetson Orin Nano
    →
-Live Prediction:
-The camera feed is processed in real time and classified every few frames to ensure stable predictions.
+
+The camera is processed and classified every few frames to keep stable predictions instead of jumping around in a couple of miliseconds
    →
-Arduino Communication:
-Predictions are sent over USB serial to the Arduino.
+
+The predictions are then sent over USB serial to the Arduino.
    →
-LCD Output:
-The Arduino updates the LCD to display the oil condition.
+
+The Arduino then updates the LCD to display the oil condition.
 
 
-Future Work Planned:
+I plan to
 
-- Display confidence percentage on LCD
-- Add automatic image capture
+- Display a confidence percentage of the AI on the LCD
 - Expand dataset for better accuracy
-- Deploy as a standalone embedded system
+- Deploy it as a standalone embedded system that can control a pump to flick on a skimmer
 
 
 
