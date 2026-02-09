@@ -26,13 +26,13 @@ Software and Libraries:
 How It Works:
 
 A MobileNetV2 model was trained on labeled images of clean and dirty oil.
-   ↓
+   →
 Live Prediction:
 The camera feed is processed in real time and classified every few frames to ensure stable predictions.
-   ↓
+   →
 Arduino Communication:
 Predictions are sent over USB serial to the Arduino.
-   ↓
+   →
 LCD Output:
 The Arduino updates the LCD to display the oil condition.
 
